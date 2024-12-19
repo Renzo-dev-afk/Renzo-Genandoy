@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RENZO GENANDOY</title>
+    <title>RENZO GENANDOY - Programmer Portfolio</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -12,10 +12,11 @@
             background-color: #1d1d1d; 
             color: white;
             overflow-x: hidden;
+            transition: background-color 0.3s ease;
         }
 
         header {
-            background: #222; 
+            background: #222;
             color: white;
             text-align: center;
             padding: 80px 20px;
@@ -40,10 +41,11 @@
 
         .section-title {
             font-size: 3em;
-            color: #d80000; 
+            color: #d80000;
             margin-bottom: 40px;
             text-align: center;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            transition: color 0.3s ease;
         }
 
         .about-me img {
@@ -68,13 +70,13 @@
             background: #444;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, background 0.3s ease;
             cursor: pointer;
         }
 
         .skills div:hover, .hobbies div:hover {
             transform: translateY(-10px);
-            background: #d80000; 
+            background: #d80000;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
 
@@ -100,13 +102,40 @@
         }
 
         .parallax {
-            background: url('parallax-bg.jpg') no-repeat center center fixed;
+            background: url('programming-gif.gif') no-repeat center center fixed;
             background-size: cover;
             padding: 100px 0;
             color: white;
             text-align: center;
             font-size: 2em;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .skills, .hobbies {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .skills div, .hobbies div {
+            margin: 10px;
+        }
+
+        .work img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .work img:hover {
+            transform: scale(1.05);
         }
 
     </style>
@@ -114,16 +143,16 @@
 <body>
 
 <header>
-    <h1>Portfolio</h1>
+    <h1>Renzo Genandoy</h1>
     <p>BSIT Student | Fellowship Baptist College</p>
 </header>
 
 <div class="container">
 
-
     <section class="parallax">
         <p>Building the Future, One Line of Code at a Time</p>
     </section>
+
     <section class="about-me">
         <div class="section-title">About Me</div>
         <div style="text-align: center;">
@@ -131,22 +160,22 @@
             <p style="font-size: 1.5em;">I am a passionate Senior Programmer with expertise in developing cutting-edge solutions in web and mobile development. I specialize in Python, JavaScript, React, and much more.</p>
         </div>
     </section>
+
     <section class="skills">
         <div class="section-title">My Skills</div>
         <div>
             <h3>Computer Troubleshoot</h3>
-            <p>Custom Pc Building</p>
+            <p>Custom PC Building</p>
         </div>
         <div>
-            
-            <p>Network And Setup</p>
+            <h3>Networking & Setup</h3>
+            <p>Network Setup & Configuration</p>
         </div>
         <div>
-            
-            <p>Hardware Optimizations</p>
+            <h3>Hardware Optimizations</h3>
+            <p>Optimize and Enhance Hardware</p>
         </div>
     </section>
-
 
     <section class="hobbies">
         <div class="section-title">My Hobbies</div>
@@ -160,22 +189,21 @@
         </div>
         <div>
             <h3>Cooking</h3>
-            <p>I find cooking to be a creative and rewarding hobby.</p>
+            <p>Creative and rewarding hobby.</p>
         </div>
     </section>
 
-    
     <section class="work">
         <div class="section-title">My Goals</div>
         <div>
-            <img src="project1.jpg" alt="Become a Successfull Programmer">
-            <p>"My goal is to become a skilled and successful programmer, mastering various languages and technologies to solve real-world problems. I aspire to work on innovative projects, contribute to the tech community, and continuously grow as a developer, delivering impactful solutions and evolving with the ever-changing landscape of programming."
-</p>
+            <img src="project1.jpg" alt="Programming Goal">
+            <p>"My goal is to become a skilled and successful programmer, mastering various languages and technologies to solve real-world problems. I aspire to work on innovative projects, contribute to the tech community, and continuously grow as a developer, delivering impactful solutions."</p>
         </div>
     </section>
-<footer>
-    <p>Contact me at <a href="mailto:gmail.com">genandoy_renzo@fbc.ph.education</a></p>
-</footer>
+
+    <footer>
+        <p>Contact me at <a href="mailto:genandoy_renzo@fbc.ph.education">genandoy_renzo@fbc.ph.education</a></p>
+    </footer>
 
 </body>
 </html>
