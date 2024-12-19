@@ -3,64 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Replicated Website</title>
+    <title>Renzo's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
-            color: white;
+            background-color: #f8f9fa;
+            color: #333;
+            box-sizing: border-box;
         }
+
         header {
-            background-color: #333;
-            padding: 20px;
+            background: #343a40;
+            color: white;
             text-align: center;
+            padding: 60px 20px;
         }
+
         header h1 {
+            font-size: 3.5em;
             margin: 0;
-            font-size: 3em;
-            letter-spacing: 2px;
-            animation: move 5s infinite;
+            text-transform: uppercase;
+            animation: headerAnimation 5s ease-in-out infinite;
         }
-        @keyframes move {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(30px); }
-            100% { transform: translateX(0); }
+
+        @keyframes headerAnimation {
+            0% { transform: translateX(0); opacity: 1; }
+            50% { transform: translateX(20px); opacity: 0.7; }
+            100% { transform: translateX(0); opacity: 1; }
         }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
         section {
-            padding: 50px;
-            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #e9ecef;
         }
-        section h2 {
-            font-size: 2em;
-            transition: color 0.3s ease;
-        }
-        section h2:hover {
-            color: #ff6347;
-        }
-        .service {
+
+        .about-me img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #6c757d;
             margin-top: 20px;
-            padding: 15px;
-            background-color: #444;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s;
         }
-        .service:hover {
+
+        .about-me img:hover {
             transform: scale(1.1);
         }
+
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-transform: uppercase;
+        }
+
+        .skills, .hobbies {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .skills div, .hobbies div {
+            width: 250px;
+            text-align: center;
+            margin: 15px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skills div:hover, .hobbies div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills h3, .hobbies h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .work img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .work img:hover {
+            transform: scale(1.05);
+        }
+
+        .work-item {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <section>
-        <h2>Services</h2>
-        <div class="service">Web Development</div>
-        <div class="service">UI/UX Design</div>
-        <div class="service">Branding</div>
+
+<header>
+    <h1>Renzo's Portfolio</h1>
+    <p>Your trusted senior programmer</p>
+</header>
+
+<div class="container">
+
+    <!-- About Me -->
+    <section class="about-me">
+        <div class="section-title">About Me</div>
+        <div style="text-align: center;">
+            <img src="your-photo.jpg" alt="Renzo's Photo">
+            <p style="font-size: 1.2em; color: #6c757d;">I am a passionate and dedicated Senior Programmer with experience in web and mobile development. I specialize in creating scalable, efficient solutions with a focus on user experience and innovation.</p>
+        </div>
     </section>
+
+    <!-- Hobbies -->
+    <section class="hobbies">
+        <div class="section-title">My Hobbies</div>
+        <div>
+            <h3>Gaming</h3>
+            <p>Exploring new worlds and challenges in games.</p>
+        </div>
+        <div>
+            <h3>Photography</h3>
+            <p>Capturing moments that tell a story.</p>
+        </div>
+        <div>
+            <h3>Coding</h3>
+            <p>Solving problems and building things from scratch.</p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+        <div class="section-title">My Skills</div>
+        <div>
+            <h3>JavaScript</h3>
+            <p>Advanced knowledge in building dynamic web applications.</p>
+        </div>
+        <div>
+            <h3>Python</h3>
+            <p>Building backend services, automation, and data analysis.</p>
+        </div>
+        <div>
+            <h3>React</h3>
+            <p>Creating high-performance, reusable components.</p>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section class="work">
+        <div class="section-title">My Work</div>
+        <div class="work-item">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project 1: Web Application</h3>
+            <p>A full-stack web application that connects people and helps them collaborate on projects.</p>
+        </div>
+        <div class="work-item">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project 2: E-commerce Platform</h3>
+            <p>Developed an e-commerce platform with secure payment processing and a user-friendly interface.</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>Contact me at <a href="mailto:renzo@example.com" style="color: #007bff;">renzo@example.com</a></p>
+</footer>
+
 </body>
 </html>
