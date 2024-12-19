@@ -133,9 +133,45 @@
             color: #0A192F;
         }
 
+        /* Animated Text */
+        .moving-text {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #00A9E0;
+            animation: moveText 5s linear infinite;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Gif Background or Section Image */
+        .gif-background {
+            background-image: url('your-gif-url.gif'); /* Use your gif URL here */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .gif-background h2, .gif-background p {
+            color: #fff;
+        }
+
+        .gif-background img {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
     </style>
     <script>
-        // Example JavaScript to interact with the page (add more features as needed)
+        
         document.addEventListener("DOMContentLoaded", () => {
             console.log("Welcome to Renzo's Portfolio!");
         });
@@ -144,7 +180,7 @@
 <body class="blue-lock-theme">
     <header>
         <div class="logo">
-            <h1>Renzo</h1>
+            <h1>Renzo Genandoy</h1>
         </div>
         <nav>
             <ul>
@@ -156,12 +192,12 @@
         </nav>
     </header>
     <main>
-        <section id="about">
+        <section id="about" class="gif-background">
             <h2>About Me</h2>
             <div class="content">
-                <img src="profile_photo_link" alt="Renzo's Photo">
+                <img src="renzo.jpg" alt="Renzo's Photo">
                 <p>
-                    Hi, I'm Renzo! I'm a hardware enthusiast, programmer-in-training, and an anime fan. 
+                    Hi, I'm Renzo! I'm a hardware enthusiast, programmer BSIT student, and an anime fan. 
                     I enjoy creating detailed designs and solving computer-related issues.
                 </p>
             </div>
@@ -171,7 +207,7 @@
             <ul>
                 <li>Computer Hardware Troubleshooting</li>
                 <li>Programming Basics (Java)</li>
-                <li>Graphic Design</li>
+                <li>Design</li>
                 <li>Cooking</li>
             </ul>
         </section>
@@ -192,9 +228,15 @@
                 <a href="mailto:genandoy_renzo@fbc.ph.education">Gmail</a>
             </div>
         </section>
+        <!-- Moving Text Section -->
+        <section id="future">
+            <div class="moving-text">
+                I Want To Be In Future
+            </div>
+        </section>
     </main>
     <footer>
-        <p>© 2024 Renzo's Portfolio.</p>
+        <p>© 2024 Portfolio.</p>
     </footer>
 </body>
 </html>
